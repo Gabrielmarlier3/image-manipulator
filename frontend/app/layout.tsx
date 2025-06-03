@@ -3,12 +3,13 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Navigation } from "@/components/navigation"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Image Processing Studio",
-  description: "A modern tool for image processing",
+  title: "Media Processing Studio",
+  description: "A modern tool for image and video processing",
     generator: 'v0.dev'
 }
 
@@ -21,7 +22,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          {children}
+          <Navigation />
+          <div className="container mx-auto px-4 py-8">{children}</div>
         </ThemeProvider>
       </body>
     </html>

@@ -21,13 +21,13 @@ export function ImageControls({ settings, onSettingsChange, onProcess, isProcess
   return (
     <Card className="mb-6">
       <CardHeader>
-        <CardTitle>Configurações de imagem</CardTitle>
+        <CardTitle>Processing Controls</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="grid gap-6">
           <div className="space-y-2">
             <div className="flex justify-between">
-              <Label htmlFor="upscale">Fator de upscale</Label>
+              <Label htmlFor="upscale">Upscale Factor</Label>
               <span className="text-sm font-medium">{settings.upscaleFactor.toFixed(1)}x</span>
             </div>
             <Slider
@@ -39,12 +39,12 @@ export function ImageControls({ settings, onSettingsChange, onProcess, isProcess
               onValueChange={(value) => onSettingsChange("upscaleFactor", value[0])}
               className="w-full"
             />
-            <p className="text-xs text-gray-500">Aumenta o tamanho da imagem (fator ≥ 1)</p>
+            <p className="text-xs text-gray-500">Increase image size (factor ≥ 1)</p>
           </div>
 
           <div className="space-y-2">
             <div className="flex justify-between">
-              <Label htmlFor="downscale">fator de Downscale</Label>
+              <Label htmlFor="downscale">Downscale Factor</Label>
               <span className="text-sm font-medium">{settings.downscaleFactor.toFixed(1)}x</span>
             </div>
             <Slider
@@ -56,12 +56,12 @@ export function ImageControls({ settings, onSettingsChange, onProcess, isProcess
               onValueChange={(value) => onSettingsChange("downscaleFactor", value[0])}
               className="w-full"
             />
-            <p className="text-xs text-gray-500">Diminui o tamanho da imagem (0 &lt; fator ≤ 1)</p>
+            <p className="text-xs text-gray-500">Decrease image size (0 &lt; factor ≤ 1)</p>
           </div>
 
           <div className="space-y-2">
             <div className="flex justify-between">
-              <Label htmlFor="noise">Quantidade de ruido</Label>
+              <Label htmlFor="noise">Noise Amount</Label>
               <span className="text-sm font-medium">{settings.noiseAmount}%</span>
             </div>
             <Slider
@@ -73,17 +73,17 @@ export function ImageControls({ settings, onSettingsChange, onProcess, isProcess
               onValueChange={(value) => onSettingsChange("noiseAmount", value[0])}
               className="w-full"
             />
-            <p className="text-xs text-gray-500">Adiciona mais ruido na imagem (0-100%)</p>
+            <p className="text-xs text-gray-500">Add noise to the image (0-100%)</p>
           </div>
 
           <Button onClick={onProcess} disabled={isProcessing} className="w-full">
             {isProcessing ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Processando...
+                Processing...
               </>
             ) : (
-              "Processar imagem"
+              "Process Image"
             )}
           </Button>
         </div>

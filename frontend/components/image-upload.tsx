@@ -78,9 +78,9 @@ export function ImageUpload({ onFileChange }: ImageUploadProps) {
             ) : (
               <>
                 <Upload className="h-12 w-12 text-gray-400" />
-                <h3 className="text-lg font-semibold">Adicione sua imagem aqui</h3>
-                <p className="text-sm text-gray-500 mb-4">Clique para pesquisar</p>
-                <Button onClick={handleButtonClick}>Selecionar imagem</Button>
+                <h3 className="text-lg font-semibold">Drop your image here</h3>
+                <p className="text-sm text-gray-500 mb-4">or click to browse</p>
+                <Button onClick={handleButtonClick}>Select Image</Button>
               </>
             )}
           </div>
