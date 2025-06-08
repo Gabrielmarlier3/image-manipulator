@@ -8,8 +8,8 @@ import { Navigation } from "@/components/navigation"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Media Processing Studio",
-  description: "A modern tool for image and video processing",
+  title: "Estúdio de Processamento de Mídia",
+  description: "Uma ferramenta moderna para processamento de imagem e áudio",
     generator: 'v0.dev'
 }
 

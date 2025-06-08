@@ -50,8 +50,8 @@ export default function Home() {
   const processImage = async () => {
     if (!file) {
       toast({
-        title: "No image selected",
-        description: "Please select an image first",
+        title: "Nenhuma imagem selecionada",
+        description: "Por favor, selecione uma imagem primeiro",
         variant: "destructive",
       })
       return
@@ -95,14 +95,14 @@ export default function Home() {
       })
 
       toast({
-        title: "Success!",
-        description: "Image processed successfully",
+        title: "Sucesso!",
+        description: "Imagem processada com sucesso",
       })
     } catch (error) {
       console.error(error)
       toast({
-        title: "Processing failed",
-        description: "There was an error processing your image",
+        title: "Falha no processamento",
+        description: "Houve um erro ao processar sua imagem",
         variant: "destructive",
       })
     } finally {
@@ -113,7 +113,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black">
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Image Processing Studio</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Estúdio de Processamento de Imagem</h1>
 
         <div className="max-w-4xl mx-auto">
           <ImageUpload onFileChange={handleFileChange} />

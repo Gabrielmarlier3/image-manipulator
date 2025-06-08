@@ -19,16 +19,16 @@ export function ImageResults({ images, isProcessing }: ImageResultsProps) {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-bold">Results</h2>
+      <h2 className="text-2xl font-bold">Resultados</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <ImageCard title="Original" imageSrc={images.original} isLoading={false} />
 
-        <ImageCard title="Upscaled" imageSrc={images.upscaled} isLoading={hasOriginal && isProcessing} />
+        <ImageCard title="Ampliada" imageSrc={images.upscaled} isLoading={hasOriginal && isProcessing} />
 
-        <ImageCard title="Downscaled" imageSrc={images.downscaled} isLoading={hasOriginal && isProcessing} />
+        <ImageCard title="Reduzida" imageSrc={images.downscaled} isLoading={hasOriginal && isProcessing} />
 
-        <ImageCard title="With Noise" imageSrc={images.noisy} isLoading={hasOriginal && isProcessing} />
+        <ImageCard title="Com Ruído" imageSrc={images.noisy} isLoading={hasOriginal && isProcessing} />
       </div>
     </div>
   )
@@ -59,7 +59,7 @@ function ImageCard({ title, imageSrc, isLoading }: ImageCardProps) {
           <div className="w-full aspect-video flex items-center justify-center border border-gray-200 rounded-md bg-gray-50">
             <div className="flex flex-col items-center text-gray-400">
               <ImageIcon className="h-12 w-12 mb-2" />
-              <span className="text-sm">No image</span>
+              <span className="text-sm">Nenhuma imagem</span>
             </div>
           </div>
         )}

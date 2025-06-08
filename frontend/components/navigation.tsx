@@ -1,20 +1,26 @@
 "use client"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { ImageIcon, Video } from "lucide-react"
+import { ImageIcon, Volume2, Video } from "lucide-react"
 
 export function Navigation() {
   const pathname = usePathname()
 
   const tabs = [
     {
-      name: "Image Processing",
+      name: "Processamento de Imagem",
       href: "/",
       icon: <ImageIcon className="h-5 w-5" />,
       active: pathname === "/",
     },
     {
-      name: "Video Detection",
+      name: "Processamento de Áudio",
+      href: "/audio",
+      icon: <Volume2 className="h-5 w-5" />,
+      active: pathname === "/audio",
+    },
+    {
+      name: "Processamento de Vídeo",
       href: "/video",
       icon: <Video className="h-5 w-5" />,
       active: pathname === "/video",
