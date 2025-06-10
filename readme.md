@@ -1,4 +1,4 @@
-````markdown
+
 # 🖼️ Image Manipulator
 
 Projeto fullstack para manipulação de imagens com funcionalidades de **upscale**, **downscale** e **inserção de ruído**, além de processamento de vídeo e áudio.
