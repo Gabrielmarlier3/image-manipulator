@@ -82,7 +82,7 @@ export default function VideoPage() {
   return (
       <main className="min-h-screen bg-white text-black">
         <div className="max-w-6xl mx-auto py-8">
-          <h1 className="text-3xl font-bold text-center mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
             Estúdio de Processamento de Vídeo
           </h1>
 
